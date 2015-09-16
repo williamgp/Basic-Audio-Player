@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Working_with_Audio" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1WW-Dn-st2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="irH-5v-bdf"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="420 - Fat Macc &amp; GP" id="0Wj-CZ-ZwY">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="play" id="2AS-zm-CWs">
+                                            <connections>
+                                                <action selector="play:" destination="BYZ-38-t0r" id="zx4-IN-qoA"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hk2-8w-18c">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="DB8-Yf-f79"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="pause" id="A0i-U9-faQ">
+                                        <connections>
+                                            <action selector="pause:" destination="BYZ-38-t0r" id="XIb-0L-DCQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="foe-t6-keH"/>
+                                    <barButtonItem systemItem="rewind" id="yT5-t5-aqv">
+                                        <connections>
+                                            <action selector="restart:" destination="BYZ-38-t0r" id="pqD-Mn-xie"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="200619_10100507794402820_3399974_n.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="B0W-Ad-7oa">
+                                <rect key="frame" x="20" y="74" width="335" height="246"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="B0W-Ad-7oa" secondAttribute="height" multiplier="335:246" id="ruw-am-lgM"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="QsH-Gl-pao">
+                                <rect key="frame" x="18" y="460" width="339" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7ar-Qx-cPE"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="adjustScrub:" destination="BYZ-38-t0r" eventType="valueChanged" id="z68-eb-qfn"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="u4o-Qb-P15">
+                                <rect key="frame" x="18" y="384" width="339" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="DRB-tT-Yqj"/>
+                                    <constraint firstAttribute="height" constant="30" id="w6b-Bt-dxe"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="adjustVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="8wo-nu-iYG"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="B0W-Ad-7oa" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="3Lq-xZ-hS4"/>
+                            <constraint firstItem="B0W-Ad-7oa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5Ea-9V-YcY"/>
+                            <constraint firstItem="QsH-Gl-pao" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="EO7-5o-CGb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1WW-Dn-st2" secondAttribute="trailing" constant="-20" id="JkQ-ZZ-PRf"/>
+                            <constraint firstItem="B0W-Ad-7oa" firstAttribute="top" secondItem="1WW-Dn-st2" secondAttribute="bottom" constant="30" id="MlC-hV-lk0"/>
+                            <constraint firstItem="B0W-Ad-7oa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uvo-ig-uqg"/>
+                            <constraint firstItem="hk2-8w-18c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="WME-TL-0B5"/>
+                            <constraint firstItem="u4o-Qb-P15" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="am6-db-9eN"/>
+                            <constraint firstItem="QsH-Gl-pao" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bhh-50-ixK"/>
+                            <constraint firstItem="u4o-Qb-P15" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bol-rF-aFF"/>
+                            <constraint firstItem="QsH-Gl-pao" firstAttribute="top" secondItem="u4o-Qb-P15" secondAttribute="bottom" constant="46" id="eY7-Km-sUb"/>
+                            <constraint firstItem="1WW-Dn-st2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="ecP-JI-kno"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hk2-8w-18c" secondAttribute="trailing" constant="-20" id="ja0-j8-iPt"/>
+                            <constraint firstItem="u4o-Qb-P15" firstAttribute="top" secondItem="B0W-Ad-7oa" secondAttribute="bottom" constant="64" id="mVl-pF-AQB"/>
+                            <constraint firstItem="1WW-Dn-st2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="mxS-cy-EbQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hk2-8w-18c" secondAttribute="bottom" id="o95-Hw-cCh"/>
+                            <constraint firstItem="u4o-Qb-P15" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="orh-I6-OoG"/>
+                            <constraint firstItem="QsH-Gl-pao" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wOE-Lx-gNJ"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="scrubSlider" destination="QsH-Gl-pao" id="Ikk-28-Ui3"/>
+                        <outlet property="slider" destination="u4o-Qb-P15" id="DTh-lk-UeS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.5" y="366.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="200619_10100507794402820_3399974_n.jpg" width="720" height="540"/>
+    </resources>
+</document>
